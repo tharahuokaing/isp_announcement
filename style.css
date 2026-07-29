@@ -1,11 +1,11 @@
-/* --- HUOKAING THARA ISP: MASTER PHASE STYLING SHEET --- */
+/* --- HUOKAING THARA ISP: HOLOGRAM & AI BRIEFING STYLE SHEET --- */
 :root {
     --neon-cyan: #00f2ff;
     --neon-purple: #bc13fe;
     --dark-bg: #030303;
     --card-bg: rgba(255, 255, 255, 0.02);
-    --border-glow: rgba(0, 242, 255, 0.18);
-    --font-cyber: 'Segoe UI', -apple-system, sans-serif;
+    --border-glow: rgba(0, 242, 255, 0.2);
+    --font-main: 'Kantumruy Pro', 'Orbitron', sans-serif;
 }
 
 * {
@@ -17,12 +17,12 @@
 body {
     background-color: var(--dark-bg);
     color: #e5e5e5;
-    font-family: var(--font-cyber);
+    font-family: var(--font-main);
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* CRT Scanline Backdrop */
+/* CRT Scanline Overlay Effect */
 body::after {
     content: " ";
     position: fixed;
@@ -48,10 +48,10 @@ body::after {
     border: 1px solid var(--border-glow);
     backdrop-filter: blur(25px) saturate(170%);
     border-radius: 6px;
-    box-shadow: 0 0 60px rgba(0, 242, 255, 0.04);
+    box-shadow: 0 0 60px rgba(0, 242, 255, 0.05);
 }
 
-/* --- LOGO BADGE & HEADERS --- */
+/* Brand Header Badge */
 .brand-badge {
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ body::after {
 
 h2 {
     font-size: 1.1rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--neon-cyan);
     border-bottom: 1px solid rgba(0, 242, 255, 0.2);
     padding-bottom: 8px;
@@ -119,158 +119,178 @@ h2 {
     text-transform: uppercase;
 }
 
-/* --- PROGRESS BAR UI --- */
-.progress-section {
-    margin-bottom: 35px;
-}
-
-.progress-bar-container {
-    width: 100%;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 242, 255, 0.3);
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
-    box-shadow: 0 0 15px var(--neon-cyan);
-    transition: width 0.6s ease-in-out;
-}
-
-.progress-metrics {
-    display: flex;
-    justify-content: space-between;
-    font-family: monospace;
-    font-size: 0.85rem;
-    color: var(--neon-cyan);
-}
-
-/* --- PHASE NAVIGATION TABS --- */
-.phase-selector {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.phase-tab {
-    flex: 1;
-    min-width: 150px;
-    padding: 12px;
+/* AI Meeting Room Section */
+.ai-meeting-panel {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(188, 19, 254, 0.3);
-    color: #aaa;
-    font-family: monospace;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.phase-tab:hover, .phase-tab.active {
-    background: rgba(0, 242, 255, 0.1);
-    border-color: var(--neon-cyan);
-    color: var(--neon-cyan);
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
-}
-
-/* --- PHASE DETAILS CARD --- */
-.phase-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(188, 19, 254, 0.3);
-    border-left: 4px solid var(--neon-cyan);
-    padding: 30px;
+    padding: 25px;
     margin-bottom: 40px;
     border-radius: 4px;
 }
 
-.phase-card h3 {
-    font-size: 1.5rem;
-    color: var(--neon-cyan);
-    margin-bottom: 10px;
-}
-
-.phase-card .timeline-tag {
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: var(--neon-purple);
-    margin-bottom: 15px;
-    display: block;
-}
-
-.phase-card ul {
-    list-style-type: square;
-    margin-left: 20px;
-    margin-top: 15px;
-    color: #ccc;
-}
-
-.phase-card ul li {
-    margin-bottom: 8px;
-}
-
-/* --- 20-PACKAGE GRID --- */
-#package-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+.meeting-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
-    opacity: 0.15;
-    pointer-events: none;
-    transition: opacity 0.8s ease;
+    margin-bottom: 20px;
 }
 
-.package-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 25px;
-    border-left: 3px solid var(--neon-purple);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.package-card:hover {
-    background: rgba(188, 19, 254, 0.03);
-    border-color: var(--neon-cyan);
-    border-left-color: var(--neon-cyan);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.08);
-}
-
-.package-card h3 {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.package-card p {
+.control-group label {
     font-size: 0.85rem;
-    color: #a0a0a0;
-    margin-bottom: 6px;
+    color: #bbb;
 }
 
-.activate-btn {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background: transparent;
+select {
+    background: #0f0f0f;
     border: 1px solid var(--neon-cyan);
-    color: var(--neon-cyan);
+    color: #fff;
+    padding: 10px 15px;
+    font-family: var(--font-main);
+    border-radius: 4px;
+    outline: none;
     cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
 }
 
-.activate-btn:hover {
+.button-group button {
+    padding: 12px 24px;
+    border: 1px solid var(--neon-cyan);
+    background: transparent;
+    color: var(--neon-cyan);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+    font-family: var(--font-main);
+}
+
+.button-group button:hover:not(:disabled) {
     background: var(--neon-cyan);
     color: #000;
     box-shadow: 0 0 15px var(--neon-cyan);
 }
 
-/* --- CONTROL TERMINAL --- */
+.button-group button:disabled {
+    border-color: #444;
+    color: #444;
+    cursor: not-allowed;
+}
+
+.teleprompter-box {
+    background: #080808;
+    border-left: 4px solid var(--neon-purple);
+    padding: 20px;
+    min-height: 90px;
+}
+
+.speaker-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--neon-purple);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--neon-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+#speech-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #fff;
+}
+
+/* 5 Phase Grid */
+.phases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.phase-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-top: 3px solid var(--neon-purple);
+    transition: 0.4s;
+}
+
+.phase-card:hover {
+    background: rgba(0, 242, 255, 0.03);
+    border-color: var(--neon-cyan);
+    border-top-color: var(--neon-cyan);
+    transform: translateY(-5px);
+}
+
+.phase-card .phase-num {
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: var(--neon-cyan);
+    letter-spacing: 2px;
+}
+
+.phase-card h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 8px 0;
+}
+
+.phase-card .cost-badge {
+    display: inline-block;
+    background: rgba(188, 19, 254, 0.2);
+    border: 1px solid var(--neon-purple);
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 0.85rem;
+    font-family: monospace;
+    margin-bottom: 12px;
+}
+
+.phase-card p {
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* Total Budget Box */
+.total-budget-box {
+    background: linear-gradient(90deg, rgba(188, 19, 254, 0.1), rgba(0, 242, 255, 0.1));
+    border: 1px solid var(--neon-cyan);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total-budget-box h3 {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.total-amount {
+    font-size: 2.2rem;
+    font-weight: 900;
+    font-family: monospace;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+}
+
+/* Control Terminal */
 .bank-panel {
     margin-top: 40px;
     background: #000;
@@ -285,8 +305,8 @@ h2 {
     display: inline-block;
 }
 
-#ip-display {
-    height: 130px;
+#terminal-display {
+    height: 110px;
     padding: 15px;
     font-family: monospace;
     font-size: 0.85rem;
@@ -294,7 +314,7 @@ h2 {
     overflow-y: auto;
 }
 
-/* --- CAPTCHA OVERLAY --- */
+/* Captcha Overlay */
 #captcha-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -331,6 +351,5 @@ h2 {
     box-shadow: 0 0 15px var(--neon-cyan);
 }
 
-/* --- ANIMATION KEYFRAMES --- */
 @keyframes spinClockwise { to { transform: rotate(360deg); } }
 @keyframes spinCounter { to { transform: rotate(-360deg); } }
