@@ -1,75 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUOKAING THARA ISP | Master Deployment Roadmap</title>
+    <title>HUOKAING THARA ISP | 5-Phase Rollout & AI Briefing</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Cyber Matrix & Khmer Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&family=Orbitron:wght@500;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Canvas Matrix Rain -->
+
+    <!-- Hologram Canvas Background -->
     <canvas id="hologram-canvas"></canvas>
 
     <div class="hologram-container">
-        <!-- Logo Branding Header -->
+        <!-- Brand Header Badge -->
         <header>
             <div class="brand-badge">
                 <div class="node-icon">
                     <div class="ring-cyan"></div>
                     <div class="ring-purple"></div>
                 </div>
-                <span class="est-tag">EST. 2026 // MASTER DEPLOYMENT PLAN</span>
+                <span class="est-tag">EST. 2026 // IMPERIAL ISP DEPLOYMENT</span>
             </div>
             <h1 class="glitch-text">HUOKAING THARA ISP</h1>
-            <div id="epoch-stabilizer">SYSTEM_TIME_UTC: SYNCING...</div>
+            <div id="epoch-stabilizer">SYSTEM_TIME: SYNCING...</div>
         </header>
 
-        <!-- Dynamic Phase Progress Bar -->
-        <section class="progress-section">
-            <h2>TOTAL NETWORK ROLLOUT PROGRESS</h2>
-            <div class="progress-bar-container">
-                <div id="phase-progress-fill" class="progress-fill" style="width: 20%;"></div>
+        <!-- AI Voice Meeting Module -->
+        <section class="ai-meeting-panel">
+            <h2>AI VOICE BRIEFING ROOM (បន្ទប់ប្រជុំសំឡេង AI)</h2>
+            <div class="meeting-controls">
+                <div class="control-group">
+                    <label for="lang-select">SELECT BRIEFING LANGUAGE / ជ្រើសរើសភាសា:</label>
+                    <select id="lang-select" onchange="updatePhaseLanguage()">
+                        <option value="km-KH" selected>🇰🇭 ភាសាខ្មែរ (Khmer)</option>
+                        <option value="en-US">🇺🇸 English (US)</option>
+                        <option value="zh-CN">🇨🇳 中文 (Mandarin)</option>
+                        <option value="fr-FR">🇫🇷 Français (French)</option>
+                        <option value="ja-JP">🇯🇵 日本語 (Japanese)</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button id="btn-speak" onclick="toggleAIVoice()">▶ START AI BRIEFING</button>
+                    <button id="btn-stop" onclick="stopAIVoice()" disabled>⏹ STOP BRIEFING</button>
+                </div>
             </div>
-            <div class="progress-metrics">
-                <span id="current-phase-text">CURRENT STATUS: PHASE 01 ACTIVE</span>
-                <span id="progress-percentage-text">20% COMPLETE</span>
-            </div>
-        </section>
-
-        <!-- Phase Navigation Selector -->
-        <nav class="phase-selector">
-            <button class="phase-tab active" onclick="switchPhase(1)">PHASE 01: CORE</button>
-            <button class="phase-tab" onclick="switchPhase(2)">PHASE 02: FIBER</button>
-            <button class="phase-tab" onclick="switchPhase(3)">PHASE 03: WIRELESS</button>
-            <button class="phase-tab" onclick="switchPhase(4)">PHASE 04: DCI</button>
-            <button class="phase-tab" onclick="switchPhase(5)">PHASE 05: LAUNCH</button>
-        </nav>
-
-        <!-- Phase Details View Box -->
-        <section id="phase-display-card" class="phase-card">
-            <!-- Dynamic Content Injected via script.js -->
-        </section>
-
-        <!-- 20-Package Architecture Matrix -->
-        <section class="packages-section">
-            <h2>INFRASTRUCTURE LINK TIERS (20-PACKAGE SYSTEM)</h2>
-            <div id="package-grid">
-                <!-- Dynamically populated via script.js -->
+            <div class="teleprompter-box">
+                <div class="speaker-status">
+                    <span class="pulse-dot"></span>
+                    <span id="speaker-label">AI PRESENTER: STANDBY</span>
+                </div>
+                <p id="speech-text">សូមចុច "START AI BRIEFING" ដើម្បីស្តាប់ការបង្ហាញអំពីផែនការចំណាយ និងដំណាក់កាលទាំង៥ នៃការបង្កើត HUOKAING THARA ISP។</p>
             </div>
         </section>
 
-        <!-- Real-Time Telemetry Terminal -->
+        <!-- 5 Deployment Phases Breakdown Grid -->
+        <section class="phases-section">
+            <h2>5-PHASE DEPLOYMENT ROADMAP & BUDGET</h2>
+            <div class="phases-grid" id="phases-container">
+                <!-- Dynamically populated by script.js -->
+            </div>
+            
+            <div class="total-budget-box">
+                <h3>TOTAL ESTIMATED CAPITAL EXPENDITURE (CAPEX)</h3>
+                <div class="total-amount">$330,000 USD</div>
+            </div>
+        </section>
+
+        <!-- Operational Console Terminal -->
         <footer class="bank-panel">
-            <h3>SATELLITE & ROUTING TELEMETRY LOG</h3>
-            <div id="ip-display">> Awaiting neural verification protocol...</div>
+            <h3>TELEMETRY LOGS & MULTILINGUAL VOICE ENGINE</h3>
+            <div id="terminal-display">> Neural Audio Synthesizer initialized for 5 languages...</div>
         </footer>
     </div>
 
-    <!-- 3-Second Threat Check / Captcha Overlay -->
+    <!-- Security Overlay Check -->
     <div id="captcha-overlay" style="display: none;">
         <div class="captcha-box">
             <h2>NEURAL ACCESS VERIFICATION</h2>
-            <p>Select the authorization node to access deployment phases.</p>
+            <p>Select the authorization node to access financial parameters.</p>
             <div class="captcha-options">
                 <button class="puzzle-btn" onclick="location.reload()">0101_NODE</button>
                 <button class="puzzle-btn correct-node" onclick="unlockSystem()">THARA_CORE</button>
