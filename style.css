@@ -1,7 +1,8 @@
-/* --- HUOKAING THARA ISP: AI METAVOICE STYLING SHEET --- */
+/* --- HUOKAING THARA ISP: EXECUTIVE STYLING & REGULATORY UI --- */
 :root {
     --neon-cyan: #00f2ff;
     --neon-purple: #bc13fe;
+    --neon-gold: #f39c12;
     --dark-bg: #030303;
     --card-bg: rgba(255, 255, 255, 0.02);
     --border-glow: rgba(0, 242, 255, 0.18);
@@ -22,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-/* CRT Hologram Screen Overlay */
+/* CRT Screen Effect */
 body::after {
     content: " ";
     position: fixed;
@@ -51,7 +52,7 @@ body::after {
     box-shadow: 0 0 50px rgba(0, 242, 255, 0.05);
 }
 
-/* Header & Logo */
+/* Logo & Header Elements */
 .brand-badge {
     display: flex;
     flex-direction: column;
@@ -109,7 +110,7 @@ body::after {
     margin: 5px 0 25px 0;
 }
 
-/* Dashboard Split Grid */
+/* Grid Layout */
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -160,6 +161,17 @@ h2 {
     transform: translateX(5px);
 }
 
+/* Phase 5 Regulatory Custom Highlight */
+.phase-card.regulatory-highlight {
+    border-left-color: var(--neon-gold);
+    background: rgba(243, 156, 18, 0.05);
+}
+
+.phase-card.regulatory-highlight.active {
+    border-color: var(--neon-gold);
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.15);
+}
+
 .phase-header {
     display: flex;
     justify-content: space-between;
@@ -170,6 +182,8 @@ h2 {
 
 .phase-num { color: var(--neon-cyan); }
 .phase-cost { color: var(--neon-purple); font-weight: bold; }
+
+.phase-card.regulatory-highlight .phase-num { color: var(--neon-gold); }
 
 .phase-card h3 {
     font-size: 1rem;
@@ -194,7 +208,7 @@ h2 {
 
 .total-bar strong { color: var(--neon-cyan); font-size: 1.1rem; }
 
-/* AI Voice Section */
+/* AI Form Controls */
 .form-group {
     margin-bottom: 20px;
 }
@@ -214,7 +228,7 @@ select {
     border: 1px solid var(--neon-purple);
     color: #fff;
     font-family: var(--font-cyber);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     outline: none;
 }
 
@@ -243,12 +257,16 @@ select {
     animation: wavePulse 0.4s ease-in-out infinite alternate;
 }
 
+.visualizer-box.speaking.gold-mode .waveform-bar {
+    animation: wavePulseGold 0.4s ease-in-out infinite alternate;
+}
+
 .visualizer-box.speaking .waveform-bar:nth-child(2n) { animation-delay: 0.1s; }
 .visualizer-box.speaking .waveform-bar:nth-child(3n) { animation-delay: 0.2s; }
 
-/* Transcript Display */
+/* Transcript Display Window */
 .transcript-box {
-    height: 140px;
+    height: 150px;
     background: #050505;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -262,11 +280,13 @@ select {
 
 .button-group {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .action-btn {
     flex: 1;
+    min-width: 130px;
     padding: 12px;
     background: transparent;
     border: 1px solid var(--neon-cyan);
@@ -275,12 +295,24 @@ select {
     cursor: pointer;
     transition: 0.3s;
     letter-spacing: 1px;
+    font-size: 0.75rem;
 }
 
 .action-btn:hover {
     background: var(--neon-cyan);
     color: #000;
     box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+.reg-btn {
+    border-color: var(--neon-gold);
+    color: var(--neon-gold);
+}
+
+.reg-btn:hover {
+    background: var(--neon-gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-gold);
 }
 
 .stop-btn {
@@ -294,7 +326,7 @@ select {
     box-shadow: 0 0 15px var(--neon-purple);
 }
 
-/* Control Terminal */
+/* Control Terminal Logs */
 .bank-panel {
     margin-top: 25px;
     background: #000;
@@ -323,4 +355,8 @@ select {
 @keyframes wavePulse {
     0% { height: 8px; background: var(--neon-cyan); }
     100% { height: 45px; background: var(--neon-purple); }
+}
+@keyframes wavePulseGold {
+    0% { height: 8px; background: var(--neon-gold); }
+    100% { height: 45px; background: #e74c3c; }
 }
