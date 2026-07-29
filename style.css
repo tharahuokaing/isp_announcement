@@ -30,7 +30,7 @@ body {
 }
 
 /* ================================================================= */
-/* BACKGROUND & TRANSLATE WRAPPER                                    */
+/* BACKGROUND & TRANSLATE WRAPPER                                   */
 /* ================================================================= */
 #hologram-canvas {
     position: fixed;
@@ -55,7 +55,7 @@ body {
 }
 
 /* ================================================================= */
-/* CONTAINER & HERO SECTIONS                                        */
+/* CONTAINER & HERO SECTIONS                                         */
 /* ================================================================= */
 .container-full {
     max-width: 1400px;
@@ -150,7 +150,8 @@ header {
     height: 24px;
 }
 
-.ring-cyan, .ring-purple {
+.ring-cyan,
+.ring-purple {
     position: absolute;
     inset: 0;
     border-radius: 50%;
@@ -371,7 +372,7 @@ select:focus {
     border-radius: 6px;
     padding: 12px;
     font-family: var(--font-mono);
-    font-size: 0.85k;
+    font-size: 0.85rem;
     color: var(--text-muted);
     min-height: 90px;
     max-height: 130px;
@@ -426,7 +427,7 @@ select:focus {
 }
 
 /* ================================================================= */
-/* FOOTER TELEMETRY AUDIT LOG                                        */
+/* FOOTER TELEMETRY AUDIT LOG                                       */
 /* ================================================================= */
 .bank-panel {
     margin-top: 25px;
@@ -467,9 +468,11 @@ select:focus {
 ::-webkit-scrollbar {
     width: 6px;
 }
+
 ::-webkit-scrollbar-track {
     background: rgba(3, 7, 18, 0.5);
 }
+
 ::-webkit-scrollbar-thumb {
     background: var(--border-cyan);
     border-radius: 3px;
