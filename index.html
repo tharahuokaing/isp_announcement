@@ -9,159 +9,164 @@
 </head>
 <body>
 
-    <!-- Google Translate Widget Container -->
+    <!-- Holographic Background Canvas -->
+    <canvas id="hologram-canvas"></canvas>
+
+    <!-- Top Utility Bar: Google Translate Widget -->
     <div class="translate-wrapper">
         <div id="google_translate_element"></div>
     </div>
 
+    <!-- Main Application Wrapper -->
     <div class="container-full">
-    
-    <!-- Fullscreen Hero Image -->
-    <section class="hero-fullscreen">
-      <img src="https://picsum.photos/1920/1080" alt="Background" class="img-full-cover">
-      <div class="hero-overlay">
-        <h1>Full Layout Header</h1>
-        <p>Responsive full-viewport presentation</p>
-      </div>
-    </section>
-
-    <!-- Full-Width Image Grid -->
-    <section class="full-grid">
-      <div class="full-grid-item">
-        <img src="isp_announment.jpg" alt="Grid item 1">
-      </div>
-    </section>
-    
-        <!-- Rest of your login form content -->
-    </main>
         
-    <!-- Holographic Matrix Background -->
-    <canvas id="hologram-canvas"></canvas>
-
-    <div class="hologram-container">
-        <!-- Header & Branding -->
-        <header>
-            <div class="brand-badge">
-                <div class="node-icon">
-                    <div class="ring-cyan"></div>
-                    <div class="ring-purple"></div>
-                </div>
-                <span class="est-tag">EST. 2026 // OFFICIAL REGULATORY PORTAL</span>
+        <!-- Fullscreen Hero Header Section -->
+        <section class="hero-fullscreen">
+            <img src="https://picsum.photos/1920/1080" alt="HUOKAING THARA ISP Network" class="img-full-cover">
+            <div class="hero-overlay">
+                <h1 class="glitch-text">HUOKAING THARA ISP</h1>
+                <p>Phase 5: National Government & International Regulatory Integration</p>
             </div>
-            <h1 class="glitch-text">HUOKAING THARA ISP</h1>
-            <div id="epoch-stabilizer">SYSTEM_TIME: SYNCING...</div>
-        </header>
+        </section>
 
-        <!-- Main Dashboard Split Screen -->
-        <div class="dashboard-grid">
+        <!-- Full-Width Media Banner -->
+        <section class="full-grid">
+            <div class="full-grid-item">
+                <img src="isp_announment.jpg" alt="Phase 5 Regulatory Announcement">
+            </div>
+        </section>
+
+        <!-- Executive Portal Glassmorphism Container -->
+        <main class="hologram-container">
             
-            <!-- SECTION 1: 5-Phase Infrastructure Cost & Regulatory Tiers -->
-            <section class="panel-section">
-                <h2>5-PHASE DEPLOYMENT & COMPLIANCE TIERS</h2>
-                <div class="phase-container">
-                    <div class="phase-card" id="phase-card-1" onclick="selectPhase(1)">
-                        <div class="phase-header">
-                            <span class="phase-num">PHASE 01</span>
-                            <span class="phase-cost">$120,000</span>
-                        </div>
-                        <h3>Core Data Center & NOC</h3>
-                        <p>Rack deployments, BGP Routers, IP Transit Handshake & Power Backups.</p>
+            <!-- Header & System Identity -->
+            <header>
+                <div class="brand-badge">
+                    <div class="node-icon">
+                        <div class="ring-cyan"></div>
+                        <div class="ring-purple"></div>
                     </div>
-
-                    <div class="phase-card" id="phase-card-2" onclick="selectPhase(2)">
-                        <div class="phase-header">
-                            <span class="phase-num">PHASE 02</span>
-                            <span class="phase-cost">$85,000</span>
-                        </div>
-                        <h3>Metropolitan Fiber Backbone</h3>
-                        <p>Dark Fiber ring installation, aerial distribution, and OLT hub nodes.</p>
-                    </div>
-
-                    <div class="phase-card" id="phase-card-3" onclick="selectPhase(3)">
-                        <div class="phase-header">
-                            <span class="phase-num">PHASE 03</span>
-                            <span class="phase-cost">$45,000</span>
-                        </div>
-                        <h3>Last-Mile FTTH Access</h3>
-                        <p>GPON/XG-PON splitter cabinets, optical drop wires, and CPE provisioning.</p>
-                    </div>
-
-                    <div class="phase-card" id="phase-card-4" onclick="selectPhase(4)">
-                        <div class="phase-header">
-                            <span class="phase-num">PHASE 04</span>
-                            <span class="phase-cost">$30,000</span>
-                        </div>
-                        <h3>AI Operations & Billing System</h3>
-                        <p>NLP auto-ticketing, self-service client portal, and automated ISP CRM.</p>
-                    </div>
-
-                    <!-- Phase 5 Active Highlight for Regulatory Licensing & Government/International Cooperation -->
-                    <div class="phase-card active regulatory-highlight" id="phase-card-5" onclick="selectPhase(5)">
-                        <div class="phase-header">
-                            <span class="phase-num">PHASE 05 (IDX-REG-05)</span>
-                            <span class="phase-cost">$20,000</span>
-                        </div>
-                        <h3>National Government & International Cooperation</h3>
-                        <p>Full spectrum compliance, telecom licensing, and security partnership with MPTC, TRC, and ITU at Phase 5.</p>
-                    </div>
+                    <span class="est-tag">EST. 2026 // OFFICIAL REGULATORY PORTAL</span>
                 </div>
-                <div class="total-bar">
-                    <span>ESTIMATED TOTAL CAPEX:</span>
-                    <strong id="total-capex">$300,000 USD</strong>
-                </div>
-            </section>
+                <div id="epoch-stabilizer">SYSTEM_TIME: SYNCING...</div>
+            </header>
 
-            <!-- SECTION 2: AI Metavoice & Phase 5 Government Announcement Engine -->
-            <section class="panel-section">
-                <h2>AI METAVOICE EXECUTIVE BRIEFING</h2>
+            <!-- Interactive Dashboard Split Grid -->
+            <div class="dashboard-grid">
                 
-                <div class="voice-controls">
-                    <div class="form-group">
-                        <label for="language-select">SELECT ANNOUNCEMENT MODE:</label>
-                        <select id="language-select" onchange="updateLanguage()">
-                            <option value="km-KH-phase5" selected>Khmer (Phase 5 Gov & International Cooperation / សេចក្តីប្រកាសកិច្ចសហប្រតិបត្តិការ)</option>
-                            <option value="km-KH">Khmer (General Briefing / ភាសាខ្មែរ)</option>
-                            <option value="en-US">English (US Executive Overview)</option>
-                            <option value="zh-CN">Chinese (中文)</option>
-                            <option value="vi-VN">Vietnamese (Tiếng Việt)</option>
-                            <option value="th-TH">Thai (ไทย)</option>
-                        </select>
+                <!-- PANEL 1: Deployment & Cost Tiers -->
+                <section class="panel-section">
+                    <h2>5-Phase Deployment & Compliance Tiers</h2>
+                    <div class="phase-container">
+                        
+                        <div class="phase-card" id="phase-card-1" onclick="selectPhase(1)">
+                            <div class="phase-header">
+                                <span class="phase-num">PHASE 01</span>
+                                <span class="phase-cost">$120,000</span>
+                            </div>
+                            <h3>Core Data Center & NOC</h3>
+                            <p>Rack deployments, BGP Routers, IP Transit Handshake & Power Backups.</p>
+                        </div>
+
+                        <div class="phase-card" id="phase-card-2" onclick="selectPhase(2)">
+                            <div class="phase-header">
+                                <span class="phase-num">PHASE 02</span>
+                                <span class="phase-cost">$85,000</span>
+                            </div>
+                            <h3>Metropolitan Fiber Backbone</h3>
+                            <p>Dark Fiber ring installation, aerial distribution, and OLT hub nodes.</p>
+                        </div>
+
+                        <div class="phase-card" id="phase-card-3" onclick="selectPhase(3)">
+                            <div class="phase-header">
+                                <span class="phase-num">PHASE 03</span>
+                                <span class="phase-cost">$45,000</span>
+                            </div>
+                            <h3>Last-Mile FTTH Access</h3>
+                            <p>GPON/XG-PON splitter cabinets, optical drop wires, and CPE provisioning.</p>
+                        </div>
+
+                        <div class="phase-card" id="phase-card-4" onclick="selectPhase(4)">
+                            <div class="phase-header">
+                                <span class="phase-num">PHASE 04</span>
+                                <span class="phase-cost">$30,000</span>
+                            </div>
+                            <h3>AI Operations & Billing System</h3>
+                            <p>NLP auto-ticketing, self-service client portal, and automated ISP CRM.</p>
+                        </div>
+
+                        <!-- Phase 5 Active Highlight -->
+                        <div class="phase-card active regulatory-highlight" id="phase-card-5" onclick="selectPhase(5)">
+                            <div class="phase-header">
+                                <span class="phase-num">PHASE 05 (IDX-REG-05)</span>
+                                <span class="phase-cost">$20,000</span>
+                            </div>
+                            <h3>National Government & International Cooperation</h3>
+                            <p>Full spectrum compliance, telecom licensing, and security partnership with MPTC, TRC, and ITU at Phase 5.</p>
+                        </div>
+
                     </div>
 
-                    <!-- Metavoice Waveform Visualizer -->
-                    <div class="visualizer-box">
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
-                        <div class="waveform-bar"></div>
+                    <div class="total-bar">
+                        <span>ESTIMATED TOTAL CAPEX:</span>
+                        <strong id="total-capex">$300,000 USD</strong>
                     </div>
+                </section>
 
-                    <!-- Official Transcript Output Container -->
-                    <div class="transcript-box" id="transcript-display">
-                        [NLP READY] ចុចប៊ូតុង "PHASE 5 GOV & INT'L COOPERATION" ដើម្បីស្តាប់សេចក្តីប្រកាសផ្លូវការនៅដំណាក់កាលទី ៥ ស្តីពីកិច្ចសហប្រតិបត្តិការជាមួយរាជរដ្ឋាភិបាលជាតិ និងស្ថាប័នអន្តរជាតិ។
+                <!-- PANEL 2: AI Metavoice Executive Engine -->
+                <section class="panel-section">
+                    <h2>AI Metavoice Executive Briefing</h2>
+                    
+                    <div class="voice-controls">
+                        <div class="form-group">
+                            <label for="language-select">SELECT ANNOUNCEMENT MODE:</label>
+                            <select id="language-select" onchange="updateLanguage()">
+                                <option value="km-KH-phase5" selected>Khmer (Phase 5 Gov & International Cooperation / សេចក្តីប្រកាសកិច្ចសហប្រតិបត្តិការ)</option>
+                                <option value="km-KH">Khmer (General Briefing / ភាសាខ្មែរ)</option>
+                                <option value="en-US">English (US Executive Overview)</option>
+                                <option value="zh-CN">Chinese (中文)</option>
+                                <option value="vi-VN">Vietnamese (Tiếng Việt)</option>
+                                <option value="th-TH">Thai (ไทย)</option>
+                            </select>
+                        </div>
+
+                        <!-- Metavoice Waveform Visualizer -->
+                        <div class="visualizer-box">
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                            <div class="waveform-bar"></div>
+                        </div>
+
+                        <!-- Official Transcript Output Container -->
+                        <div class="transcript-box" id="transcript-display">
+                            [NLP READY] ចុចប៊ូតុង "PHASE 5 GOV & INT'L COOPERATION" ដើម្បីស្តាប់សេចក្តីប្រកាសផ្លូវការនៅដំណាក់កាលទី ៥ ស្តីពីកិច្ចសហប្រតិបត្តិការជាមួយរាជរដ្ឋាភិបាលជាតិ និងស្ថាប័នអន្តរជាតិ។
+                        </div>
+
+                        <div class="button-group">
+                            <button class="action-btn reg-btn" id="phase5-btn" onclick="announcePhase5()">PHASE 5 GOV &amp; INT'L COOPERATION</button>
+                            <button class="action-btn" id="start-btn" onclick="startVoiceBriefing()">START GENERAL BRIEFING</button>
+                            <button class="action-btn stop-btn" id="stop-btn" onclick="stopVoiceBriefing()">STOP VOICE</button>
+                        </div>
                     </div>
+                </section>
 
-                    <div class="button-group">
-                        <button class="action-btn reg-btn" id="phase5-btn" onclick="announcePhase5()">PHASE 5 GOV & INT'L COOPERATION</button>
-                        <button class="action-btn" id="start-btn" onclick="startVoiceBriefing()">START GENERAL BRIEFING</button>
-                        <button class="action-btn stop-btn" id="stop-btn" onclick="stopVoiceBriefing()">STOP VOICE</button>
-                    </div>
-                </div>
-            </section>
+            </div>
 
-        </div>
+            <!-- Telemetry Logs Footer -->
+            <footer class="bank-panel">
+                <h3>ISP REGULATORY AUDIT LOG &amp; VOICE STATUS</h3>
+                <div id="ip-display">&gt; System online. Awaiting Phase 5 regulatory cooperation command...</div>
+            </footer>
 
-        <!-- System Telemetry Terminal -->
-        <footer class="bank-panel">
-            <h3>ISP REGULATORY AUDIT LOG & VOICE STATUS</h3>
-            <div id="ip-display">> System online. Awaiting Phase 5 regulatory cooperation command...</div>
-        </footer>
+        </main>
     </div>
 
+    <!-- Application Script -->
     <script src="script.js"></script>
 </body>
 </html>
