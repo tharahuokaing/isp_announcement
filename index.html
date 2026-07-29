@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUOKAING THARA ISP | AI Planning & Voice Meeting</title>
+    <title>HUOKAING THARA ISP | Phase 5 Global Spectrum & Licensing Announcement</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Canvas Matrix Rain -->
+    <!-- Holographic Matrix Background -->
     <canvas id="hologram-canvas"></canvas>
 
     <div class="hologram-container">
@@ -18,7 +18,7 @@
                     <div class="ring-cyan"></div>
                     <div class="ring-purple"></div>
                 </div>
-                <span class="est-tag">EST. 2026 // EXECUTIVE STRATEGY</span>
+                <span class="est-tag">EST. 2026 // OFFICIAL REGULATORY PORTAL</span>
             </div>
             <h1 class="glitch-text">HUOKAING THARA ISP</h1>
             <div id="epoch-stabilizer">SYSTEM_TIME: SYNCING...</div>
@@ -27,11 +27,11 @@
         <!-- Main Dashboard Split Screen -->
         <div class="dashboard-grid">
             
-            <!-- SECTION 1: 5-Phase Infrastructure Cost Breakdown -->
+            <!-- SECTION 1: 5-Phase Infrastructure Cost & Regulatory Tiers -->
             <section class="panel-section">
-                <h2>5-PHASE ROLLOUT INVESTMENT BREAKDOWN</h2>
+                <h2>5-PHASE DEPLOYMENT & COMPLIANCE TIERS</h2>
                 <div class="phase-container">
-                    <div class="phase-card active" onclick="selectPhase(1)">
+                    <div class="phase-card" id="phase-card-1" onclick="selectPhase(1)">
                         <div class="phase-header">
                             <span class="phase-num">PHASE 01</span>
                             <span class="phase-cost">$120,000</span>
@@ -40,7 +40,7 @@
                         <p>Rack deployments, BGP Routers, IP Transit Handshake & Power Backups.</p>
                     </div>
 
-                    <div class="phase-card" onclick="selectPhase(2)">
+                    <div class="phase-card" id="phase-card-2" onclick="selectPhase(2)">
                         <div class="phase-header">
                             <span class="phase-num">PHASE 02</span>
                             <span class="phase-cost">$85,000</span>
@@ -49,7 +49,7 @@
                         <p>Dark Fiber ring installation, aerial distribution, and OLT hub nodes.</p>
                     </div>
 
-                    <div class="phase-card" onclick="selectPhase(3)">
+                    <div class="phase-card" id="phase-card-3" onclick="selectPhase(3)">
                         <div class="phase-header">
                             <span class="phase-num">PHASE 03</span>
                             <span class="phase-cost">$45,000</span>
@@ -58,7 +58,7 @@
                         <p>GPON/XG-PON splitter cabinets, optical drop wires, and CPE provisioning.</p>
                     </div>
 
-                    <div class="phase-card" onclick="selectPhase(4)">
+                    <div class="phase-card" id="phase-card-4" onclick="selectPhase(4)">
                         <div class="phase-header">
                             <span class="phase-num">PHASE 04</span>
                             <span class="phase-cost">$30,000</span>
@@ -67,13 +67,14 @@
                         <p>NLP auto-ticketing, self-service client portal, and automated ISP CRM.</p>
                     </div>
 
-                    <div class="phase-card" onclick="selectPhase(5)">
+                    <!-- Phase 5 Active Highlight for Regulatory Licensing -->
+                    <div class="phase-card active regulatory-highlight" id="phase-card-5" onclick="selectPhase(5)">
                         <div class="phase-header">
-                            <span class="phase-num">PHASE 05</span>
+                            <span class="phase-num">PHASE 05 (IDX-REG-05)</span>
                             <span class="phase-cost">$20,000</span>
                         </div>
-                        <h3>Redundancy & Satellite Backup</h3>
-                        <p>Secondary IPLC routing, failover automation, and LEO terminal links.</p>
+                        <h3>Global Spectrum & Regulatory Licensing</h3>
+                        <p>MPTC, TRC, and ITU compliance, spectrum framework, and legal authorization.</p>
                     </div>
                 </div>
                 <div class="total-bar">
@@ -82,23 +83,24 @@
                 </div>
             </section>
 
-            <!-- SECTION 2: AI Voice Meeting & NLP Metavoice Portal -->
+            <!-- SECTION 2: AI Metavoice & Phase 5 Government Announcement Engine -->
             <section class="panel-section">
                 <h2>AI METAVOICE EXECUTIVE BRIEFING</h2>
                 
                 <div class="voice-controls">
                     <div class="form-group">
-                        <label for="language-select">SELECT MEETING LANGUAGE:</label>
+                        <label for="language-select">SELECT ANNOUNCEMENT MODE:</label>
                         <select id="language-select" onchange="updateLanguage()">
-                            <option value="km-KH" selected>Khmer (ភាសាខ្មែរ)</option>
-                            <option value="en-US">English (US)</option>
+                            <option value="km-KH-phase5" selected>Khmer (Phase 5 Gov Announcement / សេចក្តីប្រកាសផ្លូវការ)</option>
+                            <option value="km-KH">Khmer (General Briefing / ភាសាខ្មែរ)</option>
+                            <option value="en-US">English (US Executive Overview)</option>
                             <option value="zh-CN">Chinese (中文)</option>
                             <option value="vi-VN">Vietnamese (Tiếng Việt)</option>
                             <option value="th-TH">Thai (ไทย)</option>
                         </select>
                     </div>
 
-                    <!-- Metavoice Visualizer -->
+                    <!-- Metavoice Waveform Visualizer -->
                     <div class="visualizer-box">
                         <div class="waveform-bar"></div>
                         <div class="waveform-bar"></div>
@@ -110,13 +112,14 @@
                         <div class="waveform-bar"></div>
                     </div>
 
-                    <!-- Briefing Display Box -->
+                    <!-- Official Transcript Output Container -->
                     <div class="transcript-box" id="transcript-display">
-                        [NLP READY] Press "START BRIEFING" to initialize AI MetaVoice Executive Summary.
+                        [NLP READY] ចុចប៊ូតុង "PHASE 5 GOV ANNOUNCEMENT" ដើម្បីស្តាប់សេចក្តីប្រកាសផ្លូវការស្តីពីកិច្ចសហប្រតិបត្តិការជាមួយរាជរដ្ឋាភិបាលជាតិ និងអន្តរជាតិ។
                     </div>
 
                     <div class="button-group">
-                        <button class="action-btn" id="start-btn" onclick="startVoiceBriefing()">START BRIEFING</button>
+                        <button class="action-btn reg-btn" id="phase5-btn" onclick="announcePhase5()">PHASE 5 GOV ANNOUNCEMENT</button>
+                        <button class="action-btn" id="start-btn" onclick="startVoiceBriefing()">START GENERAL BRIEFING</button>
                         <button class="action-btn stop-btn" id="stop-btn" onclick="stopVoiceBriefing()">STOP VOICE</button>
                     </div>
                 </div>
@@ -124,10 +127,10 @@
 
         </div>
 
-        <!-- Telemetry Log Footer -->
+        <!-- System Telemetry Terminal -->
         <footer class="bank-panel">
-            <h3>ISP SYSTEM LOGS & VOICE STATUS</h3>
-            <div id="ip-display">> Awaiting executive handshake...</div>
+            <h3>ISP REGULATORY AUDIT LOG & VOICE STATUS</h3>
+            <div id="ip-display">> System online. Awaiting regulatory announcement command...</div>
         </footer>
     </div>
 
