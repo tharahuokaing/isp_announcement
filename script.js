@@ -1,229 +1,198 @@
 /**
- * HUOKAING THARA ISP - PHASE MANAGEMENT ENGINE
- * VER: 2026.08_MASTER
+ * HUOKAING THARA ISP - 5-PHASE DEPLOYMENT & AI MULTILINGUAL VOICE ENGINE
  */
 
-// Comprehensive Deployment Phase Data
+// 5-Phase Multilingual Data Model
 const phaseData = {
-    1: {
-        title: "PHASE 01: CORE NETWORK INFRASTRUCTURE",
-        timeline: "TIMELINE: Q1 - Q2 2026",
-        progress: 20,
-        description: "Establishing primary data center presence, acquiring core IP ranges, and configuring BGP routing engines.",
-        milestones: [
-            "Data Center Colocation Setup & Tier-3 Interconnects",
-            "BGP Autonomous System (ASN) Registration & IP Pool Allocation",
-            "Deployment of Main Core Routers & Edge Firewall Systems",
-            "Initial Upstream Transit Contracts Negotiation (Tier-1 Providers)"
+    "km-KH": {
+        intro: "សូមស្វាគមន៍មកកាន់ការប្រជុំបង្ហាញអំពីផែនការចំណាយ និងដំណាក់កាលទាំង៥ នៃការបង្កើត HUOKAING THARA ISP។",
+        phases: [
+            { num: "PHASE 01", title: "អាជ្ញាប័ណ្ណ និងហេដ្ឋារចនាសម្ព័ន្ធផ្លូវច្បាប់", cost: "$20,000", desc: "ការស្នើសុំអាជ្ញាប័ណ្ណ ISP ពីក្រសួង MPTC និង MOC ចុះបញ្ជីក្រុមហ៊ុន រៀបចំការិយាល័យ និងប្រព័ន្ធច្បាប់។" },
+            { num: "PHASE 02", title: "បណ្តាញ Core Network & OLT Datacenter", cost: "$80,000", desc: "ទិញម៉ាស៊ីន OLT, Core Routers, BGP Gateways, ម៉ាស៊ីនភ្លើងជំនួយ និងការតភ្ជាប់ Upstream Transit (DCI)។" },
+            { num: "PHASE 03", title: "ការទាញខ្សែអុបទិក Fiber Optic Cable (FOC)", cost: "$120,000", desc: "រៀបចំបណ្តាញខ្សែអុបទិកមេកាត់តាមក្រុង, ប្រអប់ splitter (FAT/FDB), និងបង្គោលអគ្គិសនីក្នុងតំបន់ដំបូង។" },
+            { num: "PHASE 04", title: "ប្រព័ន្ធគ្រប់គ្រង ISP Billing & Billing Software", cost: "$30,000", desc: "ដំឡើងប្រព័ន្ធសូហ្វវែរគ្រប់គ្រងអតិថិជន, ម៉ាស៊ីនរ៉ោតទ័រ Radius Server, CRM, និងអាសយដ្ឋាន IPv4/IPv6។" },
+            { num: "PHASE 05", title: "ប្រតិបត្តិការ និងការគាំទ្រអតិថិជន (CPE/ONU)", cost: "$80,000", desc: "ទិញឧបករណ៍ចុងក្រោយ CPE/Modem ជូនអតិថិជន, យានយន្តបច្ចេកទេស, ការទីផ្សារ និងថវិកាបម្រុង ៦ខែ។" }
         ]
     },
-    2: {
-        title: "PHASE 02: METRO FIBER DISTRIBUTION (FTTH/GPON)",
-        timeline: "TIMELINE: Q2 - Q3 2026",
-        progress: 40,
-        description: "Laying primary optical fiber rings across key urban sectors and installing Optical Line Terminals (OLTs).",
-        milestones: [
-            "Metro Fiber Ring Cable Deployment (Phnom Penh Central)",
-            "Installation of High-Density GPON & XG-PON OLT Units",
-            "Optical Distribution Network (ODN) Splitting Cabinet Setup",
-            "Fiber-to-the-Home (FTTH) Residential Pilot Testing"
+    "en-US": {
+        intro: "Welcome to the HUOKAING THARA ISP 5-Phase Rollout and Cost Analysis briefing.",
+        phases: [
+            { num: "PHASE 01", title: "Licensing & Legal Framework", cost: "$20,000", desc: "MPTC ISP license acquisition, business registration, legal compliance, and central office setup." },
+            { num: "PHASE 02", title: "Core Network & Datacenter", cost: "$80,000", desc: "Deployment of primary OLTs, BGP Core Routers, power backup units, and Upstream DCI Transit links." },
+            { num: "PHASE 03", title: "Fiber Optic Cable (FOC) Backbone", cost: "$120,000", desc: "Laying main trunk optical fiber cables, installing FAT/FDB splitter boxes, and pole attachment access." },
+            { num: "PHASE 04", title: "ISP Billing & Radius Management", cost: "$30,000", desc: "Integration of Automated Billing Software, Radius Authentication Servers, CRM, and IP Block allocation." },
+            { num: "PHASE 05", title: "Customer CPE & Operations", cost: "$80,000", desc: "Stocking Optical Network Units (ONU/Modems), field technician vehicles, marketing, and 6-month OPEX reserve." }
         ]
     },
-    3: {
-        title: "PHASE 03: WIRELESS & HIGH-CAPACITY BACKHAUL",
-        timeline: "TIMELINE: Q3 - Q4 2026",
-        progress: 60,
-        description: "Expanding coverage via high-speed 6G point-to-point wireless relays and rural satellite gateways.",
-        milestones: [
-            "E-Band Microwave Backhaul Relay Node Installation",
-            "Satellite Earth Station Interconnect Protocol Configuration",
-            "Deploying High-Throughput Wireless Access Points for Suburban Sectors",
-            "Redundant Link Failover Integration (Fiber + Wireless Auto-Switch)"
+    "zh-CN": {
+        intro: "欢迎参加 HUOKAING THARA ISP 5阶段部署与成本预算 AI 简报会。",
+        phases: [
+            { num: "PHASE 01", title: "许可与法律框架", cost: "$20,000", desc: "获取 MPTC ISP 运营牌照、公司注册、法律合规及总部办公室建立。" },
+            { num: "PHASE 02", title: "核心网络与数据中心", cost: "$80,000", desc: "采购主 OLT、BGP 核心路由器、后备电源及上游 DCI 骨干带宽连接。" },
+            { num: "PHASE 03", title: "光纤主干网铺设 (FOC)", cost: "$120,000", desc: "铺设城市主干光缆、安装 FAT/FDB 分光盒及电线杆挂线许可。" },
+            { num: "PHASE 04", title: "计费与 Radius 管理系统", cost: "$30,000", desc: "部署自动化计费软件、Radius 认证服务器、CRM 客户管理及 IP 地址块。" },
+            { num: "PHASE 05", title: "终端设备与运营", cost: "$80,000", desc: "采购客户 ONU 光猫、工程技术车辆、市场推广及 6 个月运营储备金。" }
         ]
     },
-    4: {
-        title: "PHASE 04: ENTERPRISE & DATA CENTER INTERCONNECT (DCI)",
-        timeline: "TIMELINE: Q4 2026 - Q1 2027",
-        progress: 80,
-        description: "Launching dedicated enterprise lines, Dark Fiber leases, and cross-border IPLC/DPLC circuits.",
-        milestones: [
-            "Subsea Cable Gateway Interconnect Integration",
-            "Private Leased Line (DPLC / IPLC) Architecture Launch",
-            "Data Center Interconnect (DCI) 100G Fiber Ring Activation",
-            "Automated DDoS Mitigation & Cyber Security Shield Layer Deployment"
+    "fr-FR": {
+        intro: "Bienvenue à la réunion d'information sur le déploiement en 5 phases du FAI HUOKAING THARA.",
+        phases: [
+            { num: "PHASE 01", title: "Licence et Cadre Légal", cost: "$20,000", desc: "Obtention de la licence FAI MPTC, enregistrement de l'entreprise et aménagement du siège." },
+            { num: "PHASE 02", title: "Réseau Central et Datacenter", cost: "$80,000", desc: "Installation des OLT principaux, routeurs BGP, alimentations de secours et transit DCI." },
+            { num: "PHASE 03", title: "Câblage en Fibre Optique", cost: "$120,000", desc: "Déploiement des câbles optiques principaux, boîtiers de séparation FAT/FDB et accès aux poteaux." },
+            { num: "PHASE 04", title: "Facturation et Gestion Radius", cost: "$30,000", desc: "Mise en place du logiciel de facturation automatique, serveur Radius, CRM et blocs d'adresses IP." },
+            { num: "PHASE 05", title: "Équipements Clients et Opérations", cost: "$80,000", desc: "Achat de modems ONU, véhicules de service, marketing et réserve opérationnelle de 6 mois." }
         ]
     },
-    5: {
-        title: "PHASE 05: COMMERCIAL LAUNCH & EMPIRE EXPANSION",
-        timeline: "TIMELINE: Q1 2027 ONWARD",
-        progress: 100,
-        description: "Full commercial operation, opening customer portals, and nationwide scale rollout.",
-        milestones: [
-            "Public Customer Billing & Self-Service Portal Launch",
-            "Nationwide Marketing & Sales Channel Activation",
-            "24/7 Network Operations Center (NOC) Full-Scale Operation",
-            "Next-Gen 6G & Neural Link Research & Development Expansion"
+    "ja-JP": {
+        intro: "HUOKAING THARA ISP の 5 段階導入計画とコスト見積もりの AI ブリーフィングへようこそ。",
+        phases: [
+            { num: "PHASE 01", title: "ライセンスと法的枠組み", cost: "$20,000", desc: "MPTC ISP ライセンス取得、会社登録、法規遵守、および本社オフィスの開設。" },
+            { num: "PHASE 02", title: "コアネットワークとデータセンター", cost: "$80,000", desc: "メイン OLT、BGP コアルーター、予備電源、上流 DCI トランジットの導入。" },
+            { num: "PHASE 03", title: "光ファイバー網の敷設", cost: "$120,000", desc: "幹線光ファイバーの敷設、FAT/FDB スプリッターボックスの設置、電柱アクセス許可。" },
+            { num: "PHASE 04", title: "課金および Radius 管理システム", cost: "$30,000", desc: "自動課金ソフトウェア、Radius 認証サーバー、CRM、IP アドレスの割り当て。" },
+            { num: "PHASE 05", title: "顧客端末および運用", cost: "$80,000", desc: "顧客用 ONU モデムの確保、技術用車両、マーケティング、および 6 か月の運転資金。" }
         ]
     }
 };
 
-// 20-Package Grid Setup
-const basePackages = [
-    { name: "FTTH Basic Starter", type: "Residential", speed: "100 Mbps", price: "$29/mo", target: "Phnom Penh Hub" },
-    { name: "FTTH Home Pro", type: "Residential", speed: "300 Mbps", price: "$49/mo", target: "Phnom Penh Hub" },
-    { name: "PPPoE Gamer Route", type: "Residential", speed: "500 Mbps", price: "$69/mo", target: "Kandal Core" },
-    { name: "GPON Gigabit Core", type: "Fiber Edge", speed: "1000 Mbps", price: "$89/mo", target: "Siem Reap Node" },
-    { name: "XG-PON Corporate", type: "SME Local", speed: "2.5 Gbps", price: "$149/mo", target: "Sihanoukville Hub" },
-    { name: "DPLC Dedicated Ring", type: "Enterprise", speed: "5 Gbps", price: "$299/mo", target: "National Ring" },
-    { name: "IPLC Border Crossing", type: "International", speed: "10 Gbps", price: "$799/mo", target: "Poipet Gateway" },
-    { name: "DCI Interconnect Link", type: "Data Center", speed: "40 Gbps", price: "Custom Quote", target: "BKK-PP Core" },
-    { name: "Dark Fiber Backbone", type: "Unlit Infrastructure", speed: "100 Gbps Core", price: "Contract", target: "Cambodia Transit" },
-    { name: "6G Telemetry Array", type: "Satellite Uplink", speed: "1 Gbps Direct", price: "$120/mo", target: "Phnom Kulen Station" }
-];
-
-const systemPackages = [
-    ...basePackages.map(p => ({...p, id: "A-" + p.name.replace(/\s+/g, '')})),
-    ...basePackages.map(p => ({...p, name: p.name + " [Backup Route]", price: p.price !== "Custom Quote" && p.price !== "Contract" ? "$" + (parseInt(p.price.replace(/\D/g,'')) * 0.95).toFixed(0) + "/mo" : p.price, id: "B-" + p.name.replace(/\s+/g, '')}))
-];
+let synth = window.speechSynthesis;
+let currentUtterance = null;
 
 window.onload = () => {
-    switchPhase(1);
-    generateGrid();
+    updatePhaseLanguage();
     initHologramBackground();
-    runEpochTracking();
+    runClock();
 
-    // Fire 3-Second Threat Check / Captcha
     setTimeout(() => {
         document.getElementById('captcha-overlay').style.display = 'flex';
     }, 3000);
 };
 
-// Switch Phase View
-function switchPhase(phaseNum) {
-    const data = phaseData[phaseNum];
-    if (!data) return;
+// Update UI Text based on language dropdown
+function updatePhaseLanguage() {
+    stopAIVoice();
+    const lang = document.getElementById('lang-select').value;
+    const data = phaseData[lang];
 
-    // Update Progress Bar
-    document.getElementById('phase-progress-fill').style.width = `${data.progress}%`;
-    document.getElementById('current-phase-text').innerText = `CURRENT STATUS: ${data.title}`;
-    document.getElementById('progress-percentage-text').innerText = `${data.progress}% COMPLETE`;
+    document.getElementById('speech-text').innerText = data.intro;
+    
+    const container = document.getElementById('phases-container');
+    container.innerHTML = '';
 
-    // Update Tabs UI
-    const tabs = document.querySelectorAll('.phase-tab');
-    tabs.forEach((tab, index) => {
-        if (index + 1 === phaseNum) {
-            tab.classList.add('active');
-        } else {
-            tab.classList.remove('active');
-        }
-    });
-
-    // Render Display Card
-    const card = document.getElementById('phase-display-card');
-    card.innerHTML = `
-        <h3>${data.title}</h3>
-        <span class="timeline-tag">${data.timeline}</span>
-        <p>${data.description}</p>
-        <ul>
-            ${data.milestones.map(m => `<li>${m}</li>`).join('')}
-        </ul>
-    `;
-
-    logTelemetry(`Switched view to Phase ${phaseNum}: ${data.title}`);
-}
-
-// Generate Package Grid
-function generateGrid() {
-    const grid = document.getElementById('package-grid');
-    grid.innerHTML = '';
-    systemPackages.forEach(pkg => {
+    data.phases.forEach(phase => {
         const card = document.createElement('div');
-        card.className = 'package-card';
+        card.className = 'phase-card';
         card.innerHTML = `
-            <h3>${pkg.name}</h3>
-            <p><strong>TOPOLOGY:</strong> ${pkg.type}</p>
-            <p><strong>CAPACITY:</strong> ${pkg.speed}</p>
-            <p><strong>ALLOCATION:</strong> ${pkg.price}</p>
-            <p><strong>TARGET:</strong> ${pkg.target}</p>
-            <button class="activate-btn" onclick="simulateProvisioning('${pkg.name}', '${pkg.id}')">TEST PROVISIONING</button>
+            <div class="phase-num">${phase.num}</div>
+            <h3>${phase.title}</h3>
+            <div class="cost-badge">BUDGET: ${phase.cost}</div>
+            <p>${phase.desc}</p>
         `;
-        grid.appendChild(card);
+        container.appendChild(card);
     });
+
+    logTerminal(`Switched active meeting context language to: [${lang}]`);
 }
 
-// Captcha Unlock Logic
-function unlockSystem() {
-    document.getElementById('captcha-overlay').style.display = 'none';
-    
-    const grid = document.getElementById('package-grid');
-    grid.style.opacity = '1';
-    grid.style.pointerEvents = 'auto';
-    logTelemetry("NEURAL HANDSHAKE: SUCCESS. Master deployment plan unlocked.");
-}
-
-// Provisioning Simulator
-async function simulateProvisioning(pkgName, pkgId) {
-    const display = document.getElementById('ip-display');
-    display.innerHTML = `<div style="color:#fff">-- SIMULATING PATH PROVISIONING FOR: ${pkgId} --</div>`;
-    
-    const deploymentPhases = [
-        "Binding PPPoE VLAN tagged identifiers...",
-        "Validating OLT optical power level budget (-18dBm target)...",
-        "Pinging downstream gateway backbone routers...",
-        "Link configuration mapped successfully."
-    ];
-
-    for (let phase of deploymentPhases) {
-        const line = document.createElement('div');
-        line.innerText = `> ${phase}`;
-        display.appendChild(line);
-        display.scrollTop = display.scrollHeight;
-        await new Promise(res => setTimeout(res, 350));
+// AI Speech Engine Logic
+function toggleAIVoice() {
+    if (synth.speaking) {
+        stopAIVoice();
+        return;
     }
+
+    const lang = document.getElementById('lang-select').value;
+    const data = phaseData[lang];
+
+    // Compile entire presentation script
+    let fullScript = data.intro + " ";
+    data.phases.forEach(p => {
+        fullScript += `${p.num}: ${p.title}. ${p.desc} Estimated budget: ${p.cost}. `;
+    });
+
+    currentUtterance = new SpeechSynthesisUtterance(fullScript);
+    currentUtterance.lang = lang;
+    currentUtterance.rate = 0.95; // Clear reading tempo
+
+    // Match best native voice for requested language
+    const voices = synth.getVoices();
+    const selectedVoice = voices.find(v => v.lang.includes(lang) || v.lang.startsWith(lang.split('-')[0]));
+    if (selectedVoice) {
+        currentUtterance.voice = selectedVoice;
+    }
+
+    currentUtterance.onstart = () => {
+        document.getElementById('btn-speak').disabled = true;
+        document.getElementById('btn-stop').disabled = false;
+        document.getElementById('speaker-label').innerText = `AI PRESENTER: SPEAKING (${lang})`;
+        logTerminal(`AI Audio Stream Started [${lang}]`);
+    };
+
+    currentUtterance.onend = () => {
+        stopAIVoice();
+        logTerminal("AI Audio Stream Completed Successfully.");
+    };
+
+    currentUtterance.onerror = (e) => {
+        stopAIVoice();
+        logTerminal(`AI Speech Error: ${e.error}`);
+    };
+
+    synth.speak(currentUtterance);
 }
 
-// Hologram Canvas Engine
+function stopAIVoice() {
+    if (synth.speaking) {
+        synth.cancel();
+    }
+    document.getElementById('btn-speak').disabled = false;
+    document.getElementById('btn-stop').disabled = true;
+    document.getElementById('speaker-label').innerText = 'AI PRESENTER: STANDBY';
+}
+
+// Matrix Background Effect
 function initHologramBackground() {
     const canvas = document.getElementById('hologram-canvas');
     const ctx = canvas.getContext('2d');
-    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
-    const colCount = Math.floor(canvas.width / 24);
-    const rainDrops = new Array(colCount).fill(1);
 
-    function drawMatrix() {
+    const cols = Math.floor(canvas.width / 22);
+    const drops = new Array(cols).fill(1);
+
+    function draw() {
         ctx.fillStyle = 'rgba(3, 3, 3, 0.08)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = '#00f2ff';
         ctx.font = '14px monospace';
 
-        rainDrops.forEach((yPos, index) => {
-            const rawCharacter = String.fromCharCode(0x30A0 + Math.random() * 95);
-            ctx.fillText(rawCharacter, index * 24, yPos * 24);
-            
-            if (yPos * 24 > canvas.height && Math.random() > 0.98) {
-                rainDrops[index] = 0;
-            }
-            rainDrops[index]++;
+        drops.forEach((y, i) => {
+            const text = String.fromCharCode(0x30A0 + Math.random() * 95);
+            ctx.fillText(text, i * 22, y * 22);
+            if (y * 22 > canvas.height && Math.random() > 0.98) drops[i] = 0;
+            drops[i]++;
         });
-        requestAnimationFrame(drawMatrix);
+        requestAnimationFrame(draw);
     }
-    drawMatrix();
+    draw();
 }
 
-// Live Clock
-function runEpochTracking() {
+function unlockSystem() {
+    document.getElementById('captcha-overlay').style.display = 'none';
+    logTerminal("Neural identity verified. Full financial access granted.");
+}
+
+function runClock() {
     setInterval(() => {
-        const dateObj = new Date();
-        document.getElementById('epoch-stabilizer').innerText = `SYSTEM_TIME_UTC: ${dateObj.toISOString()}`;
+        document.getElementById('epoch-stabilizer').innerText = `SYSTEM_TIME_UTC: ${new Date().toISOString()}`;
     }, 1000);
 }
 
-function logTelemetry(text) {
-    const display = document.getElementById('ip-display');
-    const newLine = document.createElement('div');
-    newLine.innerText = `> [LOG] ${text}`;
-    display.appendChild(newLine);
+function logTerminal(msg) {
+    const term = document.getElementById('terminal-display');
+    const line = document.createElement('div');
+    line.innerText = `> ${msg}`;
+    term.appendChild(line);
+    term.scrollTop = term.scrollHeight;
 }
