@@ -1,0 +1,336 @@
+/* --- HUOKAING THARA ISP: MASTER PHASE STYLING SHEET --- */
+:root {
+    --neon-cyan: #00f2ff;
+    --neon-purple: #bc13fe;
+    --dark-bg: #030303;
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --border-glow: rgba(0, 242, 255, 0.18);
+    --font-cyber: 'Segoe UI', -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #e5e5e5;
+    font-family: var(--font-cyber);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* CRT Scanline Backdrop */
+body::after {
+    content: " ";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+#hologram-canvas {
+    position: fixed;
+    top: 0; left: 0; z-index: -1;
+    opacity: 0.3;
+}
+
+.hologram-container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 35px;
+    background: rgba(8, 8, 8, 0.85);
+    border: 1px solid var(--border-glow);
+    backdrop-filter: blur(25px) saturate(170%);
+    border-radius: 6px;
+    box-shadow: 0 0 60px rgba(0, 242, 255, 0.04);
+}
+
+/* --- LOGO BADGE & HEADERS --- */
+.brand-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.node-icon {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 6px;
+}
+
+.ring-cyan, .ring-purple {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.ring-cyan {
+    border-top-color: var(--neon-cyan);
+    border-left-color: var(--neon-cyan);
+    animation: spinClockwise 4s linear infinite;
+}
+
+.ring-purple {
+    border-bottom-color: var(--neon-purple);
+    border-right-color: var(--neon-purple);
+    animation: spinCounter 3s linear infinite;
+}
+
+.est-tag {
+    font-family: monospace;
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    color: rgba(0, 242, 255, 0.6);
+}
+
+.glitch-text {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #fff;
+    text-shadow: 2px 0 var(--neon-purple), -2px 0 var(--neon-cyan);
+}
+
+#epoch-stabilizer {
+    text-align: center;
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--neon-purple);
+    margin: 10px 0 30px 0;
+}
+
+h2 {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--neon-cyan);
+    border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* --- PROGRESS BAR UI --- */
+.progress-section {
+    margin-bottom: 35px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+    box-shadow: 0 0 15px var(--neon-cyan);
+    transition: width 0.6s ease-in-out;
+}
+
+.progress-metrics {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--neon-cyan);
+}
+
+/* --- PHASE NAVIGATION TABS --- */
+.phase-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.phase-tab {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(188, 19, 254, 0.3);
+    color: #aaa;
+    font-family: monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.phase-tab:hover, .phase-tab.active {
+    background: rgba(0, 242, 255, 0.1);
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+/* --- PHASE DETAILS CARD --- */
+.phase-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(188, 19, 254, 0.3);
+    border-left: 4px solid var(--neon-cyan);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+}
+
+.phase-card h3 {
+    font-size: 1.5rem;
+    color: var(--neon-cyan);
+    margin-bottom: 10px;
+}
+
+.phase-card .timeline-tag {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--neon-purple);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.phase-card ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.phase-card ul li {
+    margin-bottom: 8px;
+}
+
+/* --- 20-PACKAGE GRID --- */
+#package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    opacity: 0.15;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.package-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 25px;
+    border-left: 3px solid var(--neon-purple);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.package-card:hover {
+    background: rgba(188, 19, 254, 0.03);
+    border-color: var(--neon-cyan);
+    border-left-color: var(--neon-cyan);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.08);
+}
+
+.package-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.package-card p {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    margin-bottom: 6px;
+}
+
+.activate-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.activate-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* --- CONTROL TERMINAL --- */
+.bank-panel {
+    margin-top: 40px;
+    background: #000;
+    border: 1px solid rgba(188, 19, 254, 0.3);
+}
+
+.bank-panel h3 {
+    font-size: 0.75rem;
+    background: var(--neon-purple);
+    color: #fff;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
+#ip-display {
+    height: 130px;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #00ff41;
+    overflow-y: auto;
+}
+
+/* --- CAPTCHA OVERLAY --- */
+#captcha-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(3, 3, 3, 0.96);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.captcha-box {
+    border: 1px solid var(--neon-cyan);
+    padding: 45px;
+    background: #080808;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+}
+
+.captcha-box p { margin: 15px 0 25px 0; font-size: 0.9rem; color: #888; }
+
+.puzzle-btn {
+    background: transparent;
+    border: 1px solid var(--neon-purple);
+    color: #fff;
+    padding: 15px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: monospace;
+    transition: 0.3s;
+}
+
+.puzzle-btn:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes spinClockwise { to { transform: rotate(360deg); } }
+@keyframes spinCounter { to { transform: rotate(-360deg); } }
